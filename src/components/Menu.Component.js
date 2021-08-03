@@ -7,6 +7,7 @@ import {
 	CardBody,
 	CardTitle,
 } from "reactstrap";
+import SelectedDish from "./SelectedDish.Component";
 
 class Menu extends Component {
 	constructor(props) {
@@ -57,7 +58,10 @@ class Menu extends Component {
 		return (
 			<div className="container">
 				<div className="row">{menu}</div>
-				<div className="row">{this.renderDish(this.state.selectedDish)}</div>
+				<div>
+					{/* {this.renderDish(this.state.selectedDish)} */}
+					<SelectedDish selectedDish={this.state.selectedDish} />
+				</div>
 			</div>
 		);
 	}
